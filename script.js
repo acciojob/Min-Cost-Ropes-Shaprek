@@ -6,8 +6,8 @@ function mincost(arr)
 	arr.sort((a,b)=>a-b);
 	let sum=0;
 	arr.map((elem, index)=>{
-		if(index==0)sum*(arr.length-1);
-		else sum*(arr.length-index);
+		if(index==0)sum+=(elem*(arr.length-1));
+		else sum+=(elem*(arr.length-index));
 	});
 	return sum;
   
