@@ -1,15 +1,16 @@
 function mincost(arr)
 { 
-//write your code here
-// return the min cost'
 	arr=arr.map(Number);
 	arr.sort((a,b)=>a-b);
-	let sum=0;
+	let sum=0,ans=0;
 	arr.map((elem, index)=>{
-		if(index==0)sum+=(elem*(arr.length-1));
-		else sum+=(elem*(arr.length-index));
+		
+		if(index!=0)ans+=(sum+elem);
+		sum+=elem;
+		
+		
 	});
-	return sum;
+	return ans;
   
 }
 
