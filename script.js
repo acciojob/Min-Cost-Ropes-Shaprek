@@ -2,7 +2,7 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost'
-	arr.map(Number);
+	arr=arr.map(Number);
 	arr.sort((a,b)=>a-b);
 	let sum=0;
 	arr.map((elem, index)=>{
